@@ -1,10 +1,10 @@
 import { db } from "../database.connections.js";
 
-async function create(fistName, lastName) {
+async function create(firstName, lastName) {
 
   await db.query(
-    `INSERT INTO passengers ("fistName", "lastName") VALUES ($1, $2);`,
-    [fistName, lastName]
+    `INSERT INTO passengers ("firstName", "lastName") VALUES ($1, $2);`,
+    [firstName, lastName]
   );
 }
 

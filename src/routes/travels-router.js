@@ -1,8 +1,8 @@
-import { Router } from "express"
+import { Router } from "express";
+import travelsController from "../controllers/travels-controller.js";
 
-const travelsRouter = Router()
+const travelsRouter = Router();
 
-travelsRouter
-    .post("/travels")
+travelsRouter.post("/travels", travelsController.create);
 
-export default travelsRouter
+export default travelsRouter;

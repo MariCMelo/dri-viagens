@@ -9,10 +9,15 @@ async function create(origin, destination, date) {
     )
 }
 
+async function getAll() {
+
+}
+
 
 
 const flightsRepository = {
     create,
+    getAll
 }
 
 export default flightsRepository

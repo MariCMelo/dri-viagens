@@ -5,9 +5,11 @@ async function create(req, res) {
   const { origin, destination, date } = req.body;
 
   await flightsService.create(origin, destination, date);
-  res.sendStatus(httpStatus.CREATED)
+  res.sendStatus(httpStatus.CREATED);
 }
 
-const flightsController = {create};
+async function getAll() {}
+
+const flightsController = { create, getAll };
 
 export default flightsController;

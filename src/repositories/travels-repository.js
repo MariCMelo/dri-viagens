@@ -1,5 +1,7 @@
+async function create() {}
+
 const travelsRepository = {
+  create,
+};
 
-}
-
-export default travelsRepository
+export default travelsRepository;

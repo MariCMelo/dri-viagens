@@ -1,12 +1,11 @@
-import passengersRepository from "../repositories/passengers-repository.js"
+import passengersRepository from "../repositories/passengers-repository.js";
 
-async function create(lastName, fistName){
-    await passengersRepository.create(lastName, fistName)
+async function create(lastName, firstName) {
+  await passengersRepository.create(lastName, firstName);
 }
 
 const passengersService = {
-    create,
+  create,
+};
 
-}
-
-export default passengersService
+export default passengersService;
