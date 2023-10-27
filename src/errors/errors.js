@@ -1,10 +1,19 @@
 function wrongData() {
-    return {
-        type: "wrongData",
-        message: `The fields are wrong!`
-    }
+  return {
+    type: "wrongData",
+    message: `The fields are wrong!`,
+  };
 }
 
-export const errors = {
-    wrongData
+function conflict(resource) {
+  return {
+    type: "conflict",
+    message: `${resource} already exist`,
+  };
 }
+
+
+export const errors = {
+  wrongData,
+  conflict
+};

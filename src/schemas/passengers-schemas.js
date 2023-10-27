@@ -1,7 +1,4 @@
-import joiBase from "joi"
-import joiDate from "@joi/date"
-
-const joi = joiBase.extend(joiDate)
+import joi from "joi"
 
 export const passengerSchema = joi.object({
   firstName: joi.string().min(2).max(100).required(),

@@ -9,6 +9,5 @@ const passengersRouter = Router()
 passengersRouter
     .post("/passengers", validateSchema(passengerSchema), passengersController.create)
     .get("/passengers/travels")
-    .get("/passengers", passengersRepository.getAll)
 
 export default passengersRouter
