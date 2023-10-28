@@ -18,7 +18,17 @@ async function create(origin, destination, date) {
   await flightsRepository.create(origin, destination, date);
 }
 
-async function getAll() {}
+async function getAll(origin, destination) {
+  const flight = await flightsRepository.getAll(origin, destination);
+
+  console.log(flight)
+
+  if (!flight || flight.length === 0) {
+    return [];
+  }
+
+  return flight;
+}
 
 const flightsService = {
   create,
