@@ -1,4 +1,11 @@
-async function create() {}
+import { db } from "../database.connections.js";
+
+async function create(passengerId, flightId) {
+  await db.query(
+    `INSERT INTO travels ("passengerId", "flightId") VALUES ($1, $2);`,
+    [passengerId, flightId]
+  );
+}
 
 const travelsRepository = {
   create,

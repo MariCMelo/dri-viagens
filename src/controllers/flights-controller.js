@@ -8,8 +8,13 @@ async function create(req, res) {
   res.sendStatus(httpStatus.CREATED);
 }
 
+async function findById(id) {
+  const result = await db.query(`SELECT * FROM flights WHERE id=$1`, [id]);
+  return result.rows[0];
+}
+
 async function getAll() {}
 
-const flightsController = { create, getAll };
+const flightsController = { create, findById, getAll };
 
 export default flightsController;
