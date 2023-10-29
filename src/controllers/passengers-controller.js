@@ -8,8 +8,16 @@ async function create(req, res) {
   res.sendStatus(httpStatus.CREATED);
 }
 
+async function getSumTravels(req, res) {
+  const { name } = req.query;
+
+  const passengerTravels = await passengersService.getSumTravels(name);
+  res.send(passengerTravels);
+}
+
 const passengersController = {
   create,
+  getSumTravels,
 };
 
 export default passengersController;
